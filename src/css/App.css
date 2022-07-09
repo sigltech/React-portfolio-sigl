@@ -1,0 +1,169 @@
+@import './aboutme.css';
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400;700&display=swap');
+
+:root {
+    --primary-color: rgba(1, 24, 50, 0.75);
+    --secondary-color: rgba(1, 48, 102, 0.75);
+    --overlay-color: rgba(24, 39, 1, 0.85);
+    --primary-font: 'Anek Malayalam', sans-serif;
+    --menu-speed: 0.75s;
+}
+
+html {
+    background-image: linear-gradient(to right top, #1976c2, #397fc9, #4f88d0, #6191d7, #729bde, #6ea7e8, #6bb3f0, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    height: 100vh;
+    overflow: hidden;
+}
+
+* {
+    font-family: var(--primary-font);
+}
+
+
+/* Loading Page */
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #2a496e;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: var(--primary-font);
+    text-align: center;
+}
+
+/* index page */
+
+.home-flex {
+    display: flex;
+}
+
+#masthead-name {
+    color: #AF1B3F;
+}
+
+.left-col {
+    position: relative;
+    width: 40%;
+    left: 100px;
+    margin-top: 10rem;
+    color: #fff;
+    animation: onLoadTransition 4s ease-in-out;
+}
+
+@keyframes onLoadTransition {
+    0% {
+        transform: translate(-100%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.left-col h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 2rem 0 2rem 0;
+}
+
+.left-col p {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.left-col a {
+    text-decoration: none;
+    color: #AF1B3F;
+    font-weight: 700;
+}
+
+.right-col {
+    z-index: -1;
+    position:absolute;
+    top: -494px;
+    right: -103px;
+    width: 0; 
+    height: 0;
+    height: 50vh;
+    overflow: hidden;
+    transform: rotate(90deg);
+    border-top: 186px solid transparent;
+    border-bottom: 976px solid transparent;
+    border-left: 1096px solid rgb(25, 118, 194,0.5);
+}
+
+
+.frameworks {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 550px;
+    height: 500px;
+    right: 80px;
+    top: 100px;
+    /* padding: 70px; */
+    border-radius: 45px;
+}
+
+.frameworks img {
+    width: 50px;
+    height: 50px;
+    margin: 3rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .frameworks {
+        /* position: relative;
+        height: max-content;
+        top: 300px;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 2rem; */
+        display: none;
+    }
+
+    .left-col {
+        position: absolute;
+        width: 80%;
+        left: 50px;
+        margin: 0;
+        margin-top: 3rem;
+        animation: onLoadTransition 2s ease-in-out;
+    }
+
+    .left-col p {
+        font-size: 1.2rem;
+        margin: 0;
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+    .left-col h2 {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .home-flex {
+        display: block;
+        position: relative;
+        margin-left: 1rem;
+        width:100%;
+    }
+
+}

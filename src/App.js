@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, {useState, useEffect} from 'react';
+import './css/App.css';
+import {LoadingPage} from './components/index.jsx';
+import { ProjectsPage} from './pages/ProjectsPage';
+import { AboutMe} from './pages/AboutMe';
+import { ContactmePage } from './pages/ContactmePage';
+import { Layout } from './Layout/index.js'
+import {Routes, Route} from 'react-router-dom';
 function App() {
+  const [loading, setLoading] = useState(false);
+  
+
+
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 4000);
+  // },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {loading ? <LoadingPage /> :
+      <Routes>
+        <Route path="/" element={<Layout />}>
+            <Route path="/about" element={<AboutMe />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/contact" element={<ContactmePage />} />
+        </Route>
+      </Routes>
+    }
+    </>
+
+    // <div className="App">
+    //   <Header />
+    //   <Navbar />
+    // </div>
   );
 }
 

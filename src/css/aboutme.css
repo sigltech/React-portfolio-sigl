@@ -1,0 +1,24 @@
+
+h1 {
+    color: #ffffff;
+}
+
+.about-content-container {
+    padding: 0;
+    margin: 0;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content-container p {
+    width: 50%;
+    background-color: #2a496e;
+    border-radius: 20px;
+    padding: 3rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+
+}
