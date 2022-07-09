@@ -1,1 +1,1 @@
-export {default as Layout} from './HeaderLayout'
+export {default as Layout} from './Body'

@@ -1,19 +1,17 @@
 import React from 'react'
 import '../../css/nav.css'
-import { NavLink, Outlet } from 'react-router-dom';
-import { Body } from '../Body/index.jsx';
+import { Outlet } from 'react-router-dom';
 import BurgerMenu from '../../components/Navigation/index.jsx';
 
-export default function Layout() {
+export default function HeaderLayout() {
 
   return (
     <>
         <header>
-        <h1>Richard <span>Sigl</span></h1>
-        <BurgerMenu />
+          <h1>Richard <span>Sigl</span></h1>
+          <BurgerMenu />
         </header>
-        <Body />
-        <Outlet />
+        {/* <Outlet /> */}
     </>
   )
 }

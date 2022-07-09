@@ -13,10 +13,20 @@ html {
     background-image: linear-gradient(to right top, #1976c2, #397fc9, #4f88d0, #6191d7, #729bde, #6ea7e8, #6bb3f0, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
     height: 100vh;
     overflow: hidden;
+    animation: opacityIn 3s ease-in-out;
 }
 
 * {
     font-family: var(--primary-font);
+}
+
+@keyframes opacityIn {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -52,12 +62,12 @@ html {
     left: 100px;
     margin-top: 10rem;
     color: #fff;
-    animation: onLoadTransition 4s ease-in-out;
+    animation: onLoadTransition 2s ease-in-out;
 }
 
 @keyframes onLoadTransition {
     0% {
-        transform: translate(-100%);
+        transform: translate(-120%);
     }
     100% {
         transform: translate(0);
