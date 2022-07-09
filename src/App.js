@@ -12,12 +12,12 @@ import {Routes, Route} from 'react-router-dom';
 function App() {
   const [loading, setLoading] = useState(false);
   
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 4000);
-  // },[]);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  },[]);
 
   return (
     <>
